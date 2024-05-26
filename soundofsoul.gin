@@ -1,0 +1,11 @@
+include 't5_1_1.gin'
+include 't5x/t5x/configs/runs/pretrain.gin'
+
+# Register necessary SeqIO Tasks/Mixtures.
+import taskRegister
+
+MIXTURE_OR_TASK_NAME = "SoundOfSoul"
+TASK_FEATURE_LENGTHS = {"inputs": 256, "targets": 128}
+TRAIN_STEPS = 10000
+DROPOUT_RATE = 0.01
+BATCH_SIZE = 256
