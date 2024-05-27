@@ -1,6 +1,7 @@
 from __gin__ import dynamic_registration
 import __main__ as train_script
 import seqio
+from t5.data import tasks
 from t5x import adafactor
 from t5x.examples.t5 import network
 from t5x import gin_utils
@@ -8,11 +9,10 @@ from t5x import models
 from t5x import partitioning
 from t5x import trainer
 from t5x import utils
-import taskRegister
 
 # Macros:
 # ==============================================================================
-BATCH_SIZE = 1
+BATCH_SIZE = 128
 DROPOUT_RATE = 0.01
 LABEL_SMOOTHING = 0.0
 LOSS_NORMALIZING_FACTOR = None
@@ -23,7 +23,7 @@ MODEL_DIR = './trained'
 OPTIMIZER = @adafactor.Adafactor()
 RANDOM_SEED = None
 SHUFFLE_TRAIN_EXAMPLES = True
-TASK_FEATURE_LENGTHS = {'inputs': 256, 'targets': 128}
+TASK_FEATURE_LENGTHS = {'inputs': 512, 'targets': 2560}
 TRAIN_STEPS = 10000
 TRAIN_STEPS_RELATIVE = None
 USE_CACHED_TASKS = True
