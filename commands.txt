@@ -1,2 +1,2 @@
-python3 t5x/t5x/infer.py --gin_file="soundofinfer.gin" --gin.CHECKPOINT_PATH=\"./trained/checkpoint_10000\" --gin.INFER_OUTPUT_DIR=\"./output\"
-python3 t5x/t5x/train.py --gin_file="soundofsoul.gin" --gin.MODEL_DIR=\"trained\"
+python3 t5x_singsong/t5x/infer.py --gin_file="soundofinfer.gin" --gin.CHECKPOINT_PATH=\"./trained/checkpoint_10000\" --gin.INFER_OUTPUT_DIR=\"./output\"
+python3 t5x_singsong/t5x/train.py --gin_file="soundofsoul.gin" --gin.MODEL_DIR=\"trained\"
