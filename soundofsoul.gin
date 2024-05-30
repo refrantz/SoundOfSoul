@@ -4,7 +4,7 @@ include 't5x/t5x/configs/runs/pretrain.gin'
 from t5.data import tasks
 
 MIXTURE_OR_TASK_NAME = "SoundOfSoul"
-TASK_FEATURE_LENGTHS = {"inputs": 512, "targets": 2560}
-TRAIN_STEPS = 10000
+TASK_FEATURE_LENGTHS = {"inputs": 512, "targets": 3512}
+TRAIN_STEPS = 200000
 DROPOUT_RATE = 0.01
-BATCH_SIZE = 128
+BATCH_SIZE = 256

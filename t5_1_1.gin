@@ -18,7 +18,7 @@ DROPOUT_RATE = %gin.REQUIRED
 
 # Vocabulary (shared by encoder and decoder)
 VOCABULARY = @seqio.PassThroughVocabulary()
-seqio.PassThroughVocabulary.size = 9344 
+seqio.PassThroughVocabulary.size = 5120 
 
 # ------------------- Optimizer ------------------------------------------------
 # `learning_rate` is set by `Trainer.learning_rate_fn`.
@@ -42,7 +42,7 @@ models.EncoderDecoderModel:
 # ------------------- Network specification ------------------------------------
 network.Transformer.config = @network.T5Config()
 network.T5Config:
-  vocab_size = 9344  # vocab size rounded to a multiple of 128 for TPU efficiency
+  vocab_size = 5120  # vocab size rounded to a multiple of 128 for TPU efficiency
   dtype = 'bfloat16'
   emb_dim = 768
   num_heads = 12
