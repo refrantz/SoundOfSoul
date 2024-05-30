@@ -1,5 +1,5 @@
 include 't5_1_1.gin'
-include 't5x_soundofsoul/t5x/configs/runs/pretrain.gin'
+include 't5x_singsong/t5x/configs/runs/pretrain.gin'
 
 from t5.data import tasks
 
