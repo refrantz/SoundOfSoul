@@ -7,7 +7,7 @@ from t5x import partitioning
 from t5x import utils
 from t5x import models
 
-include "t5x/examples/t5/t5_1_1/base.gin"  # defines %MODEL.
+include "t5_1_1.gin"  # defines %MODEL.
 
 INITIAL_CHECKPOINT_PATH = %gin.REQUIRED
 EVAL_OUTPUT_DIR = %gin.REQUIRED
